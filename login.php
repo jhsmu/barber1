@@ -114,7 +114,7 @@
             <!-- iniciar sesión -->
             <div class="sign-in">
                 <form action="./validaciones/iniciosesion.php" method="post">
-                    <h1>Compu start</h1>
+                    <h1>Barber Hernan</h1>
                     <h3>Iniciar Sesión</h3>
                     <div class="div social-container">
                         <a href="https://es-la.facebook.com/" class="social"><i class="fa fa-facebook"></i></a>
@@ -144,6 +144,7 @@
                     <div class="overlay-right">
                         <h1>Hola</h1>
                         <p>¿Aún no te has Registrado?</p>
+                        <p>Te invito a que te registres para que puedas agendar tu cita con nosotros</p>
                         <button id="signUp">Crear Una Cuenta</button>
                     </div>
                 </div>

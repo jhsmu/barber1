@@ -1,0 +1,42 @@
+/* Encabezado */
+
+.navbar {
+    height: 100px;
+    background: linear-gradient(to right, #0F0E0E, #181818);
+}
+.navbar-brand{
+    font-size: 2rem;
+    margin-left: 15px;
+    color: #fff;
+}
+.navbar-brand:hover{
+    color: orange;
+}
+.navbar-nav a:hover{
+    color: orange;
+}
+
+.navbar-toggler{
+    border: solid 2px #fff;
+    
+}
+.nav-link{
+    color: #fff;
+    font-size: 1.1rem;
+}
+.social{
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.transparentes {
+    margin: 0 9.9rem 0 0;
+}
+#menu a{
+    color: #111;
+    background-color: white;
+    font-size: 18px;
+}
+#menu a:hover{
+    color: #00235B;
+}

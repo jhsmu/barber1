@@ -1,0 +1,15 @@
+.carousel-item img{
+    border-radius: 20px;
+    -webkit-filter: grayscale(1); /* Webkit */
+    filter: gray; /* IE6-9 */
+    filter: grayscale(1); /* W3C */
+}
+
+.conf img{
+        height: 290px;
+        border-radius: none;
+}
+.container .card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
