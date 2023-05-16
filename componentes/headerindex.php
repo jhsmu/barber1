@@ -8,7 +8,8 @@
             <div id="MenuNavegacion" class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto" id="nav1">
                     <li class="nav-item"><a href="./index.php" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Nosotros</a></li>
+                    <li class="nav-item"><a href="./nosotros.php" class="nav-link">Nosotros</a></li>
+                    <li class="nav-item"><a href="./agendar.php" class="nav-link">Agendar Cita</a></li>
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
