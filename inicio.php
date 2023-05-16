@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,10 +21,9 @@
     <title>Barber Hernan|Inicio</title>
 </head>
 <body>
-    
     <!-- Inicio Encabezado -->
     <header>
-        <?php include("./componentes/headerindex.php"); ?>
+        <?php include("./componentes/hederinicio.php"); ?>
     </header>
     <!-- Fin Encabezado -->
 
@@ -42,7 +44,7 @@
             </div>
         </div>
     <!-- Fin Carrusel -->
-    
+
     <!-- Inicio Card informacion de la barberia breve -->
         <div>
             <div class="card mb-3 w-100" >
