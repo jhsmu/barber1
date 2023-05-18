@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="./css/carusel-productos.css">
     <!-- css estilo general -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- css estilo formulario de agendar cita -->
+    <link rel="stylesheet" href="./css/agendar.css">
     <title>Barber Hernan|Agendar</title>
 </head>
 <body>
@@ -25,7 +27,75 @@
     </header>
     <!-- Fin Encabezado -->
 
+    <!-- inicio Agendar cita -->
+    <div class="container">
+        <div class="form-image">
+            <img src="./img/baber/barber_agendar.jpeg" alt="">
+        </div>
+        <div class="form">
+            <form  action="./validaciones/AgregarProducto.php"  method="post" enctype="multipart/form-data">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Agendar Cita</h1>
+                    </div>
+                </div>
 
+                <div class="input-group">
+
+                    <div class="input-box">
+                        <label for="talla" class="form-label" >Seleccione el corte que se va realizar</label>
+                        <select name="talla" id="talla" class="form-select">
+                            <option disabled selected hidden>Seleccione</option>
+                            <option value="S/M">El broklin</option>
+                            <option value="M/L">El jerzi</option>
+                            <option value="M/L">El hongo</option>
+                            
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label for="categoria" class="form-label" >Seleccione una categoria del Producto</label>
+                        <input type="datetime" >
+                    </div>
+
+                    <div class="">
+                        <label for="precio">Servicios</label>
+                        <div class="conf" >
+                            <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Corte de adulto (13.000)</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox1">Corte de niño (10.000)</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox2">Barba (3.000)</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option4">
+                            <label class="form-check-label" for="inlineCheckbox3">Cejas (3.000)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group" >
+                    <br><br><br>
+                    <div class="input-box">
+                        <label for="descripcion">Descripcion</label>
+                        <textarea id="descripcion" type="text" name="descripcion" placeholder="Digite una descripcion" style="height: 100px; width:35rem;" required></textarea>
+                        
+                    </div>
+                </div>
+
+                
+                <div class="continue-button">
+                    <button><a href="#">Agendar Cita</a> </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- fin Agendar cita -->
 
 
     <!-- Inicio de pie de pagina -->
