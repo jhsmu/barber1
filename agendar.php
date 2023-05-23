@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- css estilo formulario de agendar cita -->
     <link rel="stylesheet" href="./css/agendar.css">
+    <!-- Link de alertas con sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Barber Hernan|Agendar</title>
 </head>
 <body>
@@ -29,11 +31,11 @@
 
     <!-- inicio Agendar cita -->
     <div class="container">
-        <div class="form-image">
+    <div class="form-image">
             <img src="./img/baber/barber_agendar.jpeg" alt="">
         </div>
         <div class="form">
-            <form  action="./validaciones/AgregarProducto.php"  method="post" enctype="multipart/form-data">
+            <form  action="./citas/agregarcita.php"  method="post" enctype="multipart/form-data">
                 <div class="form-header">
                     <div class="title">
                         <h1>Agendar Cita</h1>
@@ -44,37 +46,37 @@
 
                     <div class="input-box">
                         <label for="talla" class="form-label" >Seleccione el corte que se va realizar</label>
-                        <select name="talla" id="talla" class="form-select">
+                        <select name="corte" id="talla" class="form-select">
                             <option disabled selected hidden>Seleccione</option>
-                            <option value="S/M">El broklin</option>
-                            <option value="M/L">El jerzi</option>
-                            <option value="M/L">El hongo</option>
+                            <option value="El broklin">El broklin</option>
+                            <option value="El jerzi">El jerzi</option>
+                            <option value="El hongo">El hongo</option>
                             
                         </select>
                     </div>
                     <div class="input-box">
-                        <label for="categoria" class="form-label" >Seleccione una categoria del Producto</label>
-                        <input type="datetime" >
+                        <label for="fecha" class="form-label" >Fecha del corte</label>
+                        <input type="date" name="fecha" id="fecha" >
                     </div>
 
                     <div class="">
                         <label for="precio">Servicios</label>
                         <div class="conf" >
                             <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">Corte de adulto (13.000)</label>
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="opcion" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Corte de adulto </label>
                             </div>
                             <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox1">Corte de niño (10.000)</label>
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="opcion" value="option2">
+                            <label class="form-check-label" for="inlineCheckbox1">Corte de niño </label>
                             </div>
                             <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option3">
-                            <label class="form-check-label" for="inlineCheckbox2">Barba (3.000)</label>
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="opcion" value="option3">
+                            <label class="form-check-label" for="inlineCheckbox2">Barba </label>
                             </div>
                             <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option4">
-                            <label class="form-check-label" for="inlineCheckbox3">Cejas (3.000)</label>
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3"  name="opcion"value="option4">
+                            <label class="form-check-label" for="inlineCheckbox3">Cejas </label>
                             </div>
                         </div>
                     </div>
@@ -107,3 +109,27 @@
 
 </body>
 </html>
+<?php 
+if (isset($_SESSION['agenda'])) {
+    echo "<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Éxito',
+        text: 'Producto agregado'
+        });
+    </script>";
+    unset($_SESSION['producto']);
+}
+
+if (isset($_SESSION['actualizar_error'])) {
+    echo "<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Producto no actualizado'
+        });
+    </script>";
+    unset($_SESSION['actualizar_error']);
+}
+
+?>

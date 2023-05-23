@@ -44,8 +44,8 @@
                 <div class="input-group">
 
                     <div class="input-box">
-                        <label for="talla" class="form-label" >Seleccione el corte que se va realizar</label>
-                        <select name="talla" id="talla" class="form-select">
+                        <label for="corte" class="form-label" >Seleccione el corte que se va realizar</label>
+                        <select name="corte" id="corte" class="form-select">
                             <option disabled selected hidden>Seleccione</option>
                             <option value="S/M">El broklin</option>
                             <option value="M/L">El jerzi</option>
@@ -54,8 +54,8 @@
                         </select>
                     </div>
                     <div class="input-box">
-                        <label for="categoria" class="form-label" >Seleccione una categoria del Producto</label>
-                        <input type="datetime" >
+                        <label for="fecha" class="form-label" >Fecha del corte</label>
+                        <input type="date" >
                     </div>
 
                     <div class="">

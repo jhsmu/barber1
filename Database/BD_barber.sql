@@ -23,4 +23,15 @@ CREATE TABLE administrador(
     contrasenia VARCHAR(50) NOT NULL
 );
 
+
+
+CREATE TABLE citas(
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    corte VARCHAR(30) NOT NULL,
+    fecha DATE NOT NULL,
+    opcion VARCHAR(30) NOT NULL,
+    descripcion VARCHAR(50) NOT NULL
+
+);
+
 INSERT INTO administrador (nombre, apellido, email, contrasenia) VALUES ('Hernan', 'Jacop', 'admin@gmail.com', 'Admin12345');
