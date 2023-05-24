@@ -29,7 +29,7 @@
                         <div class=" transparentes">
                             <ul class="dropdown-menu" id="menu">
                                 <li class="nav-item"><a class="nav-link dropdown-item"
-                                        href="#">
+                                        href="./citas/agenda.php">
                                         <i class="fa fa-bag-shopping"></i>
                                        Citas</a></li>
                                 <li class="nav-item"><a class="nav-link dropdown-item"

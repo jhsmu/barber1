@@ -20,8 +20,10 @@
     $consulta->bindParam(':fecha',$fecha);
     $consulta->bindParam(':opcion',$opcion);
     $consulta->bindParam(':descripcion',$descripcion);
+    $ver = $consulta->execute(); 
 
-    if($consulta->execute()){
+    if($ver){
+        session_start();
         $_SESSION["agenda"]="Registro correcto";
         header("location: ../agendar.php");
     }else{

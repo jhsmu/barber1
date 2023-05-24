@@ -1,3 +1,8 @@
+<?php 
+        session_start();
+        error_reporting(0);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +22,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- css estilo formulario de agendar cita -->
     <link rel="stylesheet" href="./css/agendar.css">
-    <!-- Link de alertas con sweetalert -->
+    <!-- link de Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Barber Hernan|Agendar</title>
 </head>
@@ -92,7 +97,7 @@
 
                 
                 <div class="continue-button">
-                    <button><a href="#">Agendar Cita</a> </button>
+                <button name="crear" type="submit">Agendar Cita</button>
                 </div>
             </form>
         </div>
@@ -106,30 +111,20 @@
     </footer>
     <!-- Fin de pie de pagina -->
 
-
+        <script src="./js/funciones.js"></script>
 </body>
 </html>
+
 <?php 
-if (isset($_SESSION['agenda'])) {
-    echo "<script>
-    Swal.fire({
-        icon: 'success',
-        title: 'Éxito',
-        text: 'Producto agregado'
-        });
-    </script>";
-    unset($_SESSION['producto']);
-}
+if (isset($_SESSION["agenda"])) {
+    echo ('
+    <script>Swal.fire({
+        title: "Exito!",
+        text: "Ya puede iniciar sesión",
+        icon: "success" 
+    });
+    </script>');
 
-if (isset($_SESSION['actualizar_error'])) {
-    echo "<script>
-    Swal.fire({
-        icon: 'error',
-        title: 'Error',
-        text: 'Producto no actualizado'
-        });
-    </script>";
-    unset($_SESSION['actualizar_error']);
+    unset($_SESSION["agenda"]);   
 }
-
 ?>

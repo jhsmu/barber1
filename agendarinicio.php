@@ -34,7 +34,7 @@
             <img src="./img/baber/barber_agendar.jpeg" alt="">
         </div>
         <div class="form">
-            <form  action="./validaciones/AgregarProducto.php"  method="post" enctype="multipart/form-data">
+            <form  action="./citas/agregarcita.php"  method="post" enctype="multipart/form-data">
                 <div class="form-header">
                     <div class="title">
                         <h1>Agendar Cita</h1>
@@ -91,7 +91,7 @@
 
                 
                 <div class="continue-button">
-                    <button><a href="#">Agendar Cita</a> </button>
+                    <button><a>Agendar Cita</a> </button>
                 </div>
             </form>
         </div>

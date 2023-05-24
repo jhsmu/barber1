@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    error_reporting(0);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -173,3 +177,17 @@ https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.all.min.js
 
 </body>
 </html>
+<?php
+if (isset($_SESSION["registro"])) {
+    echo ('
+    <script>Swal.fire({
+        title: "Exito!",
+        text: "Su cuenta ha sido creada correctamente",
+        icon: "success" 
+    });
+    </script>');
+
+    unset($_SESSION["registro"]);   
+}
+
+?>
